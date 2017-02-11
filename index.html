@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>call的</title>
+    <script type="text/javascript">
+        var person={
+            name:"王三",
+            age:19,
+            say:function(message){
+                alert(this);
+                alert(this.name+"say:"+message);
+            }
+        };
+
+        var stu={
+           name:"李四"
+        };
+        person.say.call();//没有指定对象，那么就是window对象
+        person.say.call(stu,"对象更改为stu");
+        //把person的方法放到stu上使用
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
